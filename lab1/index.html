@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<title>Лабораторна робота №1</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script defer src="./active_tab.js"></script>
+<script src="./table_constract.js"></script>
+
+<script src="./npp.js"></script>
+<script src="./method.js"></script>
+<script src="./qualification.js"></script>
+<script src="./article.js"></script>
+<script src="./thesis.js"></script>
+<script defer src="start_tab.js"></script>
+<style>.tab {
+    cursor: pointer;
+}</style>
+</head>
+<body class="container">
+<h1>Проєкт моніторингу професійної активності НПП</h1>
+<p>ВП НУБіП Україна "Бережанський агротехнічний інститут</p>
+<p>Кафедра інформаційних технологій та вищої математики</p>
+<div class="d-flex">
+<div id="npp" class="tab p-1 border me-3">Склад кафедри</div>
+<div id="articles" class="tab p-1 border me-3">Наукові статті</div>
+<div id="thesis" class="tab p-1 border me-3">Тези</div>
+<div id="development" class="tab p-1 border me-3"> Підвищення кваліфікації</div>
+<div id="methodical" class="tab p-1 border me-3"> Методичні розробки</div>
+</div>
+<div id="report"></div>
+<script defer>construction_table(NPP);</script>
+</body>
+</html>
