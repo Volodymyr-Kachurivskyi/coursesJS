@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Лабораторна робота №4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/mystyle.css">
+       <script defer src="./active_tab.js"></script>
+    <script src="./table_constract.js"></script>
+    <script src="./Data/npp.js"></script>
+    <script src="./Data/method.js"></script>
+    <script src="./Data/qualification.js"></script>
+    <script src="./Data/article.js"></script>
+    <script src="./Data/thesis.js"></script>
+    <script src="./Data/refmethod.js"></script>
+    <script src="./init_const.js"></script>
+    <script src="./create_form.js"></script>
+    <script src="./save_data.js"></script>
+    <script src="./sesion.js"></script>
+    <script defer src="start_tab.js"></script>
+    <script src="./action.js"></script>
+    <script src="./Offcanvas/popap_w.js"></script>
+    <script src="./Offcanvas/modal_w.js"></script>
+    <script src="https://kit.fontawesome.com/50382f4ed9.js" crossorigin="anonymous"></script>
+    <script src="./localSrorage.js"></script>
+</head>
+
+<body class="container">
+    <h1>Лабораторна робота №4 (localStorage)</h1>
+    <h2>Проєкт моніторингу професійної активності НПП</h2>
+    <p>ВП НУБіП Україна "Бережанський агротехнічний інститут</p>
+    <p>Кафедра інформаційних технологій та вищої математики</p>
+    <div class="d-flex" style="justify-content: space-between;">
+        <div id="active_table"></div>
+        <div class="mb-3 text-end"><button class="btn btn-info" onclick="showModal('insert')"><i
+                    class="fas fa-plus"></i>Додати дані до таблиці</button></div>
+    </div>
+    <div class="d-flex">
+        <div id="npp" class="tab p-1 border me-3">Склад кафедри</div>
+        <div id="articles" class="tab p-1 border me-3">Наукові статті</div>
+        <div id="thesis" class="tab p-1 border me-3">Тези конференцій</div>
+        <div id="development" class="tab p-1 border me-3"> Підвищення кваліфікації</div>
+        <div id="methodical" class="tab p-1 border me-3"> Методичні розробки</div>
+        <div id="refmethod" class="tab p-1 border me-3"> Види методичок</div>
+    </div>
+    <div id="report"></div>
+
+    <!-- модальне вікно-->
+    <div id="modal" class="modal">
+        <div id="modal_head" class="text-end" style="margin-right: 20%;">
+            <button id="closeModal" class="btn btn-light" onclick="closeModal()"><i
+                    class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div id="modal_body" class="mb-3">
+            <h2 id="modal_title"></h2>
+            <div id="modal_content">
+            </div>
+        </div>
+        <div id="modal_footer" class="text-end" style="margin-right: 20%;">
+            <button id="save" class="btn btn-light"><i class="fa-regular fa-floppy-disk"></i>Зберегти дані</button>
+        </div>
+    </div>
+    <!-- попап-вікно-->
+    <div id="popap" class="modal-overlay">
+        <div class="popap-box">
+            <div class="popap-header">
+                <div>Повідомлення системи</div>
+                <button type="button" class="btn" onclick="closePopap()" style="padding:0px"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="popap-body" id="popapBody">
+                <!-- Динамічний текст або форма -->
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
